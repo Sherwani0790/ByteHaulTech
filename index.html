@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- css files -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <!-- <link href="assets/css/aos/aos.css" rel="stylesheet"> -->
+
+  <!-- Custom styles -->
+  <link href="assets/globalStyle/styles.css" rel="stylesheet">
+  <!-- JS files -->
+  <script src="assets/js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+  <!-- Header Section start -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+      <a href="index.html" class="logo me-auto"><img src="assets/images/LogoMain.svg" alt="" class="img-fluid"></a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class="dropdown active"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown "><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown "><a href="#"><span>Brandss</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown "><a href="#"><span>About Us</span> <i class="bi bi-chevron-down"></i></a>
+            <!-- Temporary commented -->
+            <!-- <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul> -->
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <div class="ms-auto">
+        <div class="dp-flex">
+          <div>
+
+            <img src="assets/images/searchLogo.svg" alt="">
+          </div>
+          <div class="dp-flex col-gap-4">
+
+            <img src="assets/images/GlobeSimple.svg" alt="">
+            <span class="topbar-right-text">EN</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <!-- Header Section end -->
+  <!-- main section 1  -->
+  <section id="mainSection1" class="d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 g-top">
+          <div class="text-container">
+
+            <p class="section1-main-text-1">Bridging technology gaps, empowering global connectivity.</p>
+            <p class="section1-main-text-2">Connecting the world with cutting-edge IT solutions.</p>
+            <p class="section1-main-text-3">Delivering IT solutions where others can't.</p>
+            <p class="section1-main-text-4">Pioneering IT hardware delivery in the world.</p>
+          </div>
+        </div>
+      </div>
+
+  </section>
+</body>
+<script>
+  const paragraphs = document.querySelectorAll('.section1-main-text-1, .section1-main-text-2, .section1-main-text-3, .section1-main-text-4');
+  let currentParagraphIndex = 0;
+  const animationDuration = 3000; // 3 seconds
+
+  function showParagraph() {
+    paragraphs.forEach(p => p.style.display = 'none');
+    paragraphs[currentParagraphIndex].style.display = 'block';
+    paragraphs[currentParagraphIndex].classList.add('fadeInOut');
+
+    setTimeout(() => {
+      paragraphs[currentParagraphIndex].classList.remove('fadeInOut');
+      currentParagraphIndex = (currentParagraphIndex + 1) % paragraphs.length;
+      showParagraph();
+    }, animationDuration);
+  }
+
+  showParagraph();
+</script>
+
+</html>
